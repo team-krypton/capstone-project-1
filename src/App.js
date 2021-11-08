@@ -5,6 +5,7 @@ import Header from '../src/components/Header';
 // import SideHustle from './components/SideHustle';
 import Google from './components/Google';
 import SearchBar from './components/SearchBar';
+import SearchButton from './components/SearchButton'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           {searchTerm ? <p className="text-result">{searchTerm}</p> : <Google/>}
         </div>
         <SearchBar query={searchTerm} setQuery={setSearchTerm}/>
+        <SearchButton/>
       </main>
     </div>
   );
