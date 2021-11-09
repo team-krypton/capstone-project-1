@@ -142,41 +142,49 @@ main > * {
   line-height: 28px;
   font-size: small;
 }
-#footer {
-  position: fixed;
-  margin-top: 277px;
-}
+
 .frow {
   display: flex;
-  width: 1370px;
-  height: 50px;
+  width: 100%;
+  flex-wrap: wrap;
   background-color: #f2f2f2;
   padding: 15px 30px;
-  border-bottom: 1px solid #dadce0;
+  justify-content: space-between;
+  /* outline: 2px solid blue; */
 }
 .abt {
   text-decoration: none;
   color: #70757a;
   font-family: arial,sans-serif;
   font-size: 15px;
+  margin: 0 20px;
 }
-.fcol {
-  margin-right: 40px;
+.carbon {
+  margin: 0;
 }
-.fcol2 {
-  margin-right: 250px;
+.col-1 {
+  margin-left: 0;
 }
+.col-2 {
+  text-align: center;
+}
+.col-3 {
+  text-align: right;
+}
+
 .fcol3 {
-  margin-left: 40px;
-  margin-right: 40px;
+  flex: 1 1 33%;
+  margin: 10px 0;
+  /* margin: 10px 0 10px auto; */
+  /* outline: 2px solid blue; */
+  /* margin-right: 40px; */
 }
 .googlelf {
-  margin-left: 100px;
   width: 12px;
 }
 .from {
   display: flex;
-  width: 1370px;
+  width: 100%;
   height: 50px;
   background-color: #f2f2f2;
   padding: 15px 30px;
