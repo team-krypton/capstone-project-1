@@ -5,7 +5,7 @@ import SearchButton from './SearchButton'
 const Main = ({searchTerm, setSearchTerm}) => {
     return (
         <main>
-            <div class="hero-container">
+            <div className="hero-container">
             {searchTerm ? <p className="text-result">{searchTerm}</p> : <Google/>}
             </div>
             <SearchBar query={searchTerm} setQuery={setSearchTerm}/>

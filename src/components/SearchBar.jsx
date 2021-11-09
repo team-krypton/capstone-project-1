@@ -7,7 +7,7 @@ const SearchBar = ({ query, setQuery }) => {
                 </svg>
             </span>
             <input
-                class="search-input"
+                className="search-input"
                 type="text"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
