@@ -6,6 +6,8 @@ import Header from '../src/components/Header';
 import Google from './components/Google';
 import SearchBar from './components/SearchBar';
 import SearchButton from './components/SearchButton'
+import Footer from './components/Footer'
+import UppFooter from './components/UppFooter';
 
 function App() {
 
@@ -20,7 +22,9 @@ function App() {
         </div>
         <SearchBar query={searchTerm} setQuery={setSearchTerm}/>
         <SearchButton/>
+        <UppFooter />
       </main>
+      <Footer />
     </div>
   );
 }
