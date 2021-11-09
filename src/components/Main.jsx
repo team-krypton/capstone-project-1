@@ -9,7 +9,7 @@ const Main = ({searchTerm, setSearchTerm}) => {
             {searchTerm ? <p className="text-result">{searchTerm}</p> : <Google/>}
             </div>
             <SearchBar query={searchTerm} setQuery={setSearchTerm}/>
-            <SearchButton/>
+            <SearchButton />
             <p className="gogf">Google offered in:  <a href="" className="lang">Hausa</a> &nbsp;
                 <a href="" className="lang">Igbo</a> &nbsp;
                 <a href="" className="lang">Èdè Yorùbá</a> &nbsp;
