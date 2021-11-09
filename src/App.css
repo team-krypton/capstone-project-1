@@ -51,7 +51,7 @@ header {
 }
 
 main {
-  margin: 2rem auto;
+  margin: 1rem auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -96,7 +96,7 @@ main > * {
 
 .search-bar {
   position: relative;
-  width: 100%;
+  width: 90%;
   height: 50px;
   max-width: 1000px;
   z-index: 2;
@@ -140,47 +140,46 @@ main > * {
   text-align: center;
   color: #3c4043;
   line-height: 28px;
+  font-size: small;
 }
-
-footer {
-  background: #f2f2f2;
-  color: #70757A;
+#footer {
+  position: fixed;
+  margin-top: 277px;
 }
-
-.footer-container > * {
+.frow {
+  display: flex;
+  width: 1370px;
+  height: 50px;
+  background-color: #f2f2f2;
   padding: 15px 30px;
-}
-
-.location {
-  /* outline: 2px solid red; */
-  font-size: 15px;
   border-bottom: 1px solid #dadce0;
 }
-
-.footer-container {
-  width: 100%;
-}
-
-.footer-section {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 20px;
-  text-align: center;
-  justify-content: center;
-}
-
-.wrap-link {
-  display: flex;
-  margin: 15px 0;
-  column-gap: 15px;
-  justify-content: center;
-  /* outline: 2px solid blue; */
-}
-footer a {
-  color: #70757A;
+.abt {
   text-decoration: none;
-  cursor: pointer;
+  color: #70757a;
+  font-family: arial,sans-serif;
+  font-size: 15px;
 }
-.carbon-neutrality {
-  margin: 15px 0;
+.fcol {
+  margin-right: 40px;
+}
+.fcol2 {
+  margin-right: 250px;
+}
+.fcol3 {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.googlelf {
+  margin-left: 100px;
+  width: 12px;
+}
+.from {
+  display: flex;
+  width: 1370px;
+  height: 50px;
+  background-color: #f2f2f2;
+  padding: 15px 30px;
+  border-bottom: 1px solid #dadce0;
+  margin-top: 190px;
 }
