@@ -3,9 +3,8 @@ import './App.css';
 
 import Header from '../src/components/Header';
 // import SideHustle from './components/SideHustle';
-import Google from './components/Google';
-import SearchBar from './components/SearchBar';
-import SearchButton from './components/SearchButton'
+import Main from './components/Main';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -14,13 +13,8 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <main>
-        <div class="hero-container">
-          {searchTerm ? <p className="text-result">{searchTerm}</p> : <Google/>}
-        </div>
-        <SearchBar query={searchTerm} setQuery={setSearchTerm}/>
-        <SearchButton/>
-      </main>
+      <Main searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
+      <Footer />
     </div>
   );
 }

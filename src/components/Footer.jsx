@@ -1,23 +1,48 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+const API_KEY = process.env.REACT_APP_API_KEY;
+const lookup = require('country-code-lookup')
 
-const Header = () => {
+const Footer = () => {
+    const [country, setCountry] = useState("")
+
+    const getCountry = async () => {
+       const request = await fetch((`https://ipinfo.io/json?token=${API_KEY}`));
+       try {
+           const data = await request.json()
+           const countryData = lookup.byIso(data.country).country
+           return countryData
+       } catch (error) {
+           console.error(error)
+       }
+    }
+    
+    useEffect(async () => {
+        const countryName = await getCountry()
+        setCountry(countryName)
+    }, [])
+
     return (
-        <header>
-            <nav className="nav-container">
-                <div className="nav-link">Gmail</div>
-                <div className="nav-link">Images</div>
-                <div className="nav-link">
-                    <svg focusable="false" viewBox="0 0 24 24">
-                        <path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path>
-                    </svg>
+        <footer>
+            <div className="footer-container">
+                <p className="location" >{country ? country : "Nigeria"}</p>
+                <div className="footer-section">
+                    <div className='carbon-neutrality'>Carbon neutral since 2007</div>
+                    <div className="wrap-link">
+                        <a href="">About</a>
+                        <a href="">Advertising</a>
+                        <a href="">Business</a>
+                        <a href="">How Search works</a>
+                    </div>
+                    <div className="wrap-link">
+                        <a href="">Privacy</a>
+                        <a href="">Terms</a>
+                        <a href="">Settings</a>
+                    </div>
                 </div>
-                <div className="nav-link profile-img">
-                    <img src="" alt="" />
-                </div>
-            </nav>
-        </header>
+            </div>
+        </footer>
     )
 };
 
 
-export default Header
+export default Footer
