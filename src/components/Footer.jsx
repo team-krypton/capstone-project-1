@@ -5,21 +5,19 @@ const lookup = require('country-code-lookup')
 
 const Footer = () => {
     const [country, setCountry] = useState("")
-
-    const getCountry = async () => {
-       const request = await fetch((`https://ipinfo.io/json?token=${API_KEY}`));
-       try {
-           const data = await request.json()
-           const countryData = lookup.byIso(data.country).country
-           return countryData
-       } catch (error) {
-           console.error(error)
-       }
-    }
     
-    useEffect(async () => {
-        const countryName = await getCountry()
-        setCountry(countryName)
+    useEffect(() => {
+        async function getCountry () {
+            const request = await fetch((`https://ipinfo.io/json?token=${API_KEY}`));
+            try {
+                const data = await request.json()
+                const countryData = lookup.byIso(data.country).country
+                setCountry(countryData)
+            } catch (error) {
+                console.error(error)
+            }
+        }
+        getCountry()
     }, [])
 
     return (
