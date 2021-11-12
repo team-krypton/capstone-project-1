@@ -12,7 +12,7 @@ const Footer = () => {
                 const data = await request.json()
                 const countryData = lookup.byIso(data.country).country
                 setCountry(countryData)
-            } catch (error) {
+            } catch (error) { 
                 console.error(error)
             }
         }
@@ -28,6 +28,7 @@ const Footer = () => {
                 <div className="col-1 fcol3">
                     <a href="" className="abt">About</a>
                     <a href="" className="abt">Advertizing</a>
+
                     <a href="" className="abt">Business</a>
                     <a href="" className="abt">How&nbsp;Search&nbsp;works</a>
                 </div>
@@ -46,4 +47,4 @@ const Footer = () => {
     )
 };
 
-export default Footer
+export default Footer 
