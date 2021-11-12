@@ -14,7 +14,7 @@ const Header = () => {
                 <div className="nav-link profile-img">
                     <img src="" alt="" />
                 </div>
-            </nav>
+            </nav>  
         </header>
     )
 };
