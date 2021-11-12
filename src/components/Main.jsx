@@ -14,6 +14,7 @@ const Main = ({searchTerm, setSearchTerm}) => {
                 <a href="" className="lang">Igbo</a> &nbsp;
                 <a href="" className="lang">Èdè Yorùbá</a> &nbsp;
                 <a href="" className="lang">Nigerian Pidgin</a>
+
             </p>
         </main>
     )
